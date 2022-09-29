@@ -1,0 +1,8 @@
+@import 'src/app/photo-viewer/colors';
+
+.itemsContainer {
+  background-color: $backgroundColor;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,23 @@
+@import 'src/app/photo-viewer/colors';
+
+.itemContainer {
+  background-color: $backgroundColorLighter;
+  display: flex;
+  border: #ccc 3px;
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+  width: 280px;
+  cursor: pointer;
+
+  .itemLeftColumn {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 100px;
+  }
+}

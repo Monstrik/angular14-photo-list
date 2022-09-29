@@ -1,0 +1,15 @@
+<ng-container *ngIf="photosForView.length > 0">
+  <mat-paginator
+    (page)="onChangePage($event)"
+    [length]="photos.length"
+    [pageSizeOptions]="[3, 6, 9]"
+    [pageSize]="3">
+  </mat-paginator>
+
+  <div class="itemsContainer">
+    <div *ngFor="let photo of photosForView">
+      <app-photo-preview-small [photo]="photo"></app-photo-preview-small>
+    </div>
+  </div>
+
+</ng-container>
