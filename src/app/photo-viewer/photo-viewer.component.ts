@@ -16,11 +16,9 @@ export class PhotoViewerComponent implements OnInit {
 
   dataSource: MatTableDataSource<Photo>;
 
-
   constructor(private service: DataService) {
     this.dataSource = new MatTableDataSource(this.photos);
   }
-
 
   ngOnInit() {
     this.service.getPhotos()
@@ -30,17 +28,8 @@ export class PhotoViewerComponent implements OnInit {
       });
   }
 
-
-  ngAfterViewInit() {
-    // this.dataSource = new MatTableDataSource(this.photos);
-  }
-
   onChangePage(pe: PageEvent) {
     this.photosForView = this.photos.slice(pe.pageIndex * pe.pageSize, pe.pageIndex * pe.pageSize + pe.pageSize)
-
-    console.log(pe.pageIndex);
-    console.log(pe.pageSize);
-    console.log(pe);
   }
 }
 
